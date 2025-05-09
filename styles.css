@@ -132,12 +132,12 @@ nav ul a:hover{
 }
 @media (max-width: 768px){
   .overlay-text{
-    font-size: 6vw; /* Slightly larger for tablets */
+    font-size: 4vw; /* Slightly larger for tablets */
   }
 }
 @media (max-width: 480px){
   .overlay-text{
-    font-size: 8vw; /*larger for mobile devices */
+    font-size: 3vw; /*larger for mobile devices */
   }
 }
 @keyframes moveText {
