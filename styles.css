@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: white;
+  color: rgb(15, 5, 5);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.containerdiv {
+  background-color: rgb(25, 92, 25);
+  height: 40px;
+}
+.topdiv {
+  margin-left: auto;
+  width: 30%;
+  display: flex; /* Changed to Flexbox */
+  justify-content: center;
+  margin: 30px 0;
+  margin-left: auto;
+  padding-right: 10px;
+}
+.topdiv a {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+.logo-img {
+  margin: 5px 0;
+  display: inline-block; /* Ensures it can sit next to the search container */
+  margin-right: 40px; /* Space between the header and the search container */
+  width: 100px;
+  height: 50%;
+}
+
+.search-container {
+  margin-left: 70px;
+  display: flex;
+  width: 40%;
+  padding: 10px;
+}
+
+.search-container input[type="text"] {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: darkgreen;
+}
+.nav-bar {
+  width: 30%;
+  display: flex; /* Changed to Flexbox */
+  justify-content: center;
+  margin: 30px 0;
+  margin-left: auto;
+  padding-right: 5px;
+}
+
+nav ul a {
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+
+nav ul {
+  display: flex; /* Display links in a row */
+  margin-left: auto;
+}
+
+.secondnav {
+  margin: 20px 0;
+  text-align: center; /* Centered navigation */
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  height: 30px;
+}
+
+.secondnav a {
+  padding: 0 20px; /* Adjusted padding */
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.imgwrapper {
+  overflow: hidden; /* Prevents overflow if the image is larger than the wrapper */
+  max-height: 100%; /* Set a maximum height for the wrapper */
+}
+
+.imgwrapper img {
+  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Make the image take the full width of the wrapper */
+  max-height: 500px; /* Ensure the image does not exceed the height of the wrapper */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  opacity: 1;
+  margin-bottom: 10px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center align the links */
+  }
+}
+.overlay-text {
+  position: absolute; /* Position the text absolutely within the wrapper */
+  top: 70%; /* Move down to 70% from the top (adjust as needed) */
+  left: 50%; /* Move right 50% from the left */
+  transform: translate(-50%, -50%); /* Center the text horizontally */
+  color: white; /* Text color */
+  background-color: green;
+  font-family: "Roboto", sans-serif; /* Use the Roboto font */
+  font-size: 30px; /* Adjust font size as needed */
+  font-weight: 500; /* Bold font weight */
+  text-align: center; /* Center text alignment */
+  padding: 5px; /* Optional: padding around the text */
+  border-radius: 5px; /* Optional: rounded corners */
+  letter-spacing: 5px; /* Optional: add some letter spacing */
+  text-shadow: 1px 1px 2px rgba(29, 23, 23, 0.7); /* Optional: add a subtle text shadow for better readability */
+  animation: moveText 5s infinite alternate; /* Apply animation */
+}
+@keyframes moveText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg); /* Start position */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px) rotate(-5deg); /* Move up and rotate */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg); /* End position */
+  }
+}
+.storelogos {
+  display: flex;
+  width: auto;
+  height: 100px;
+}
+@media (max-width: 480px) {
+  header {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  ul a {
+    font-size: 16px; /* Further reduce font size for very small screens */
+  }
+}
